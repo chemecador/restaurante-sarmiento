@@ -1,0 +1,33 @@
+---
+const navLinks = [
+  { href: '#inicio',   label: 'Inicio' },
+  { href: '#nosotros', label: 'Nosotros' },
+  { href: '#contacto', label: 'Contacto' },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-sarmiento-dark/90 backdrop-blur-sm">
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#inicio" class="font-serif text-2xl text-sarmiento-amber tracking-wide">
+      El Sarmiento
+    </a>
+    <ul class="hidden md:flex gap-8">
+      {navLinks.map(({ href, label }) => (
+        <li>
+          <a
+            href={href}
+            class="text-sarmiento-cream hover:text-sarmiento-amber transition-colors duration-200 font-sans text-sm tracking-widest uppercase"
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
+    <!-- Mobile menu button (decorativo por ahora) -->
+    <button class="md:hidden text-sarmiento-cream" aria-label="Menú">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+</header>

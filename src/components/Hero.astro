@@ -1,0 +1,49 @@
+---
+---
+
+<section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <!-- Fondo con overlay -->
+  <div class="absolute inset-0 bg-sarmiento-dark">
+    <div class="absolute inset-0 bg-gradient-to-b from-sarmiento-dark/60 via-sarmiento-dark/40 to-sarmiento-dark/80"></div>
+    <!-- Textura de madera simulada con patrón CSS -->
+    <div class="absolute inset-0 opacity-10"
+         style="background-image: repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(200,131,42,0.3) 2px, rgba(200,131,42,0.3) 3px);">
+    </div>
+  </div>
+
+  <!-- Contenido -->
+  <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+    <!-- Ornamento superior -->
+    <div class="flex items-center justify-center gap-4 mb-8">
+      <div class="h-px w-16 bg-sarmiento-amber"></div>
+      <span class="text-sarmiento-amber text-sm tracking-[0.4em] uppercase font-sans">Restaurante</span>
+      <div class="h-px w-16 bg-sarmiento-amber"></div>
+    </div>
+
+    <h1 class="font-serif text-6xl md:text-8xl text-sarmiento-cream mb-6 leading-tight">
+      El Sarmiento
+    </h1>
+
+    <p class="font-serif italic text-xl md:text-2xl text-sarmiento-amber mb-10">
+      Cocina tradicional con alma de fuego
+    </p>
+
+    <p class="font-sans text-sarmiento-cream/80 text-base md:text-lg max-w-xl mx-auto mb-12 leading-relaxed">
+      Sabores auténticos, recetas de siempre y el calor de una mesa que siente como hogar.
+    </p>
+
+    <a
+      href="#nosotros"
+      class="inline-block border border-sarmiento-amber text-sarmiento-amber hover:bg-sarmiento-amber hover:text-sarmiento-dark transition-all duration-300 px-10 py-4 text-sm tracking-widest uppercase font-sans"
+    >
+      Descúbrenos
+    </a>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <svg class="w-6 h-6 text-sarmiento-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </div>
+</section>

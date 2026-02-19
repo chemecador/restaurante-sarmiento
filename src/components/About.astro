@@ -1,0 +1,52 @@
+---
+---
+
+<section id="nosotros" class="py-24 bg-sarmiento-cream">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Cabecera de sección -->
+    <div class="text-center mb-16">
+      <span class="text-sarmiento-amber text-sm tracking-[0.4em] uppercase font-sans">Nuestra historia</span>
+      <h2 class="font-serif text-4xl md:text-5xl text-sarmiento-brown mt-3">Sobre nosotros</h2>
+      <div class="flex items-center justify-center gap-4 mt-6">
+        <div class="h-px w-12 bg-sarmiento-amber"></div>
+        <div class="w-2 h-2 rounded-full bg-sarmiento-amber"></div>
+        <div class="h-px w-12 bg-sarmiento-amber"></div>
+      </div>
+    </div>
+
+    <!-- Contenido en dos columnas -->
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+
+      <!-- Texto -->
+      <div class="space-y-6">
+        <p class="font-sans text-sarmiento-muted text-lg leading-relaxed">
+          El Sarmiento nació del amor por la cocina honesta. Fundado hace más de dos décadas, nuestro restaurante lleva el nombre de la rama de vid que alimenta el fuego con el que cocinamos cada plato.
+        </p>
+        <p class="font-sans text-sarmiento-muted text-lg leading-relaxed">
+          Trabajamos con productores locales, respetamos la temporada y creemos que los mejores ingredientes no necesitan artificios. Solo tiempo, mimo y el calor de las brasas.
+        </p>
+        <p class="font-serif italic text-sarmiento-brown text-xl mt-8">
+          "La mejor mesa es la que reúne a la gente que quieres."
+        </p>
+      </div>
+
+      <!-- Valores -->
+      <div class="grid grid-cols-2 gap-6">
+        {[
+          { icon: '🔥', titulo: 'Brasa & Fuego',  desc: 'Cocinamos a fuego lento con sarmientos de vid.' },
+          { icon: '🌿', titulo: 'Producto local', desc: 'De productores de la comarca, de temporada.' },
+          { icon: '🍷', titulo: 'Vinos de autor',  desc: 'Selección de bodegas pequeñas y cercanas.' },
+          { icon: '🏡', titulo: 'Ambiente acogedor', desc: 'Un rincón cálido para disfrutar sin prisas.' },
+        ].map(({ icon, titulo, desc }) => (
+          <div class="bg-white p-6 rounded-sm shadow-sm border-t-2 border-sarmiento-amber">
+            <div class="text-3xl mb-3">{icon}</div>
+            <h3 class="font-serif text-sarmiento-brown font-semibold mb-2">{titulo}</h3>
+            <p class="font-sans text-sarmiento-muted text-sm leading-relaxed">{desc}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>

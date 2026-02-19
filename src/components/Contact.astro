@@ -1,0 +1,68 @@
+---
+const horarios = [
+  { dias: 'Martes – Viernes', horas: '9:00 – 18:00' },
+  { dias: 'Sábado – Domingo', horas: '10:00 – 18:00' },
+  { dias: 'Lunes',            horas: 'Cerrado' },
+];
+---
+
+<section id="contacto" class="py-24 bg-sarmiento-brown text-sarmiento-cream">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Cabecera -->
+    <div class="text-center mb-16">
+      <span class="text-sarmiento-amber text-sm tracking-[0.4em] uppercase font-sans">Encuéntranos</span>
+      <h2 class="font-serif text-4xl md:text-5xl text-sarmiento-cream mt-3">Contacto</h2>
+      <div class="flex items-center justify-center gap-4 mt-6">
+        <div class="h-px w-12 bg-sarmiento-amber"></div>
+        <div class="w-2 h-2 rounded-full bg-sarmiento-amber"></div>
+        <div class="h-px w-12 bg-sarmiento-amber"></div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-12">
+
+      <!-- Dirección -->
+      <div>
+        <h3 class="font-serif text-sarmiento-amber text-xl mb-4">Dónde estamos</h3>
+        <address class="not-italic font-sans text-sarmiento-cream/80 leading-relaxed space-y-1">
+          <p>Av. de Pablo Gargallo, 41</p>
+          <p>50003 – Zaragoza</p>
+          <p class="pt-3">
+            <a href="tel:+34639580211" class="hover:text-sarmiento-amber transition-colors">
+              639 580 211
+            </a>
+          </p>
+        </address>
+      </div>
+
+      <!-- Horarios -->
+      <div>
+        <h3 class="font-serif text-sarmiento-amber text-xl mb-4">Horarios</h3>
+        <ul class="font-sans text-sarmiento-cream/80 space-y-3">
+          {horarios.map(({ dias, horas }) => (
+            <li class="flex flex-col">
+              <span class="text-sarmiento-cream font-semibold text-sm">{dias}</span>
+              <span class="text-sm">{horas}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Reservas -->
+      <div>
+        <h3 class="font-serif text-sarmiento-amber text-xl mb-4">Reservas</h3>
+        <p class="font-sans text-sarmiento-cream/80 text-sm leading-relaxed mb-6">
+          La reserva se realiza exclusivamente por teléfono.
+        </p>
+        <a
+          href="tel:+34639580211"
+          class="inline-block bg-sarmiento-amber text-sarmiento-dark hover:bg-sarmiento-cream transition-colors duration-300 px-8 py-3 text-sm tracking-widest uppercase font-sans font-semibold"
+        >
+          Llamar ahora
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
