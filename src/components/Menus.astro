@@ -1,0 +1,53 @@
+---
+const menus = [
+  {
+    title: 'Menú del Día',
+    price: '18€',
+    description: 'Propuesta variada y equilibrada de lunes a viernes. Platos caseros elaborados con productos locales y de temporada.',
+    icon: '🍽️',
+    extra: ''
+  },
+  {
+    title: 'Menú Caracol',
+    price: '30€',
+    description: 'Nuestra seña de identidad. Caracoles cocinados con receta tradicional, ensalada, surtido de brasas y postre.',
+    icon: '🐌',
+    extra: ''
+  },
+  {
+    title: 'Menú Chuletón',
+    price: '40€',
+    description: 'Para los amantes de la carne. Chuletón de vaca madurada a la brasa con el aroma inconfundible del sarmiento.',
+    icon: '🔥',
+    extra: 'Mínimo 2 personas'
+  }
+];
+---
+
+<section id="menus" class="py-24 bg-sarmiento-dark text-sarmiento-cream">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <span class="text-sarmiento-amber text-sm tracking-[0.4em] uppercase font-sans">Nuestra propuesta</span>
+      <h2 class="font-serif text-4xl md:text-5xl text-sarmiento-cream mt-3">Menús para disfrutar</h2>
+      <div class="flex items-center justify-center gap-4 mt-6">
+        <div class="h-px w-12 bg-sarmiento-amber"></div>
+        <div class="w-2 h-2 rounded-full bg-sarmiento-amber"></div>
+        <div class="h-px w-12 bg-sarmiento-amber"></div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {menus.map(menu => (
+        <div class="group border border-sarmiento-amber/20 p-8 rounded-sm flex flex-col bg-sarmiento-brown/30 hover:border-sarmiento-amber transition-all duration-300">
+          <div class="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">{menu.icon}</div>
+          <h3 class="font-serif text-2xl text-sarmiento-amber mb-4">{menu.title}</h3>
+          <p class="font-sans text-sarmiento-cream/70 text-base leading-relaxed flex-grow">{menu.description}</p>
+          <div class="mt-8 border-t border-sarmiento-amber/10 pt-6">
+            <span class="font-serif text-4xl text-white">{menu.price}</span>
+            {menu.extra && <span class="block text-sm text-sarmiento-amber mt-2 uppercase tracking-widest">{menu.extra}</span>}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
